@@ -31,6 +31,15 @@ Then run the playbook like this:
 
     ansible-playbook -i hosts site.yml
 
+If you want to run only for the master:
+
+    ansible-playbook -i hosts site.yml --limit=master
+
+If you want to run only for the minions:
+
+    ansible-playbook -i hosts site.yml --limit=minion
+
+
 To run a specific role:
 
     ansible-playbook -i hosts run_role.yml -e "ROLE=<role>" -e "TARGET=<hostname>"
