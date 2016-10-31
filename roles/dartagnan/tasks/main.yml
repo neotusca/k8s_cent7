@@ -1,4 +1,10 @@
 ---
+- name: Create a directory for registry volume. 
+  file: path=/srv/docker/images state=directory mode=0755
+
+- name: chcon on /srv/docker/images for container to write in.
+  shell: chcon -Rt svirt_sandbox_file_t /srv/docker/images
+
 - name: Run a private docker registry - D'Artagnan
   docker_container:
     name: dartagnan
