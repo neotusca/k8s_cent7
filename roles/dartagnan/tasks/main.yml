@@ -1,0 +1,11 @@
+---
+- name: Run a private docker registry - D'Artagnan
+  docker_container:
+    name: dartagnan
+    state: started
+    image: registry:2
+    ports:
+      - "{{ registry_ip }}:{{ registry_port }}:5000/tcp"
+    volumes:
+      - /srv/docker/images:/var/lib/registry:rw
+...

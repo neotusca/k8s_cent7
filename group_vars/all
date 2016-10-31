@@ -1,0 +1,11 @@
+---
+master_ip: 10.0.24.25
+master_port: 8080
+etcd_ip: 10.0.24.25
+etcd_port: 2379
+etcd_key: /ucim/network
+# Create hash password with 'mkpasswd -m sha-512' from whois debian package.
+ucim_password: $6$GvXvuLFd6EVtV$q.kXlQj3u63PaaDjh49M45KGe4WkkTu6Io3x84KhCk08ODCGc9EKdt14a1Syc6c94NBVWFVrpLW7Mu5dvjzla1
+registry_ip: 10.0.24.25
+registry_port: 5000
+...
