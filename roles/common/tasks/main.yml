@@ -8,6 +8,7 @@
     - lvm2
     - parted
     - ntp
+    - bind-utils
 
 - name: Set timezone to {{ timezone }}
   timezone: name={{ timezone }}

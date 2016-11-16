@@ -17,4 +17,4 @@ KUBELET_API_SERVER="--api-servers=http://{{ master_ip }}:{{ master_port }}"
 KUBELET_POD_INFRA_CONTAINER="--pod-infra-container-image={{ pod_image_repo }}"
 
 # Add your own!
-KUBELET_ARGS=""
+KUBELET_ARGS="{{ kubelet_args }}"

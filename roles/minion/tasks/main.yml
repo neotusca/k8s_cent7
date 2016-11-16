@@ -6,6 +6,9 @@
   with_items:
     - kubelet
     - config
+- name: Stop minion dynamic duo
+  service: name={{ item }} state=stopped enabled=yes
+  with_items: "{{ minion_duo }}"
 - name: Copy kube{let,-proxy} lastest binaries
   copy: src={{ item }} dest=/usr/bin/{{ item }} mode=0755
   with_items: "{{ minion_duo }}"
