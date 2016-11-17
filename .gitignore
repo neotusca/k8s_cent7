@@ -1,0 +1,6 @@
+roles/minion/files/kubelet
+roles/minion/files/kube-proxy
+roles/master/files/kube-apiserver
+roles/master/files/kube-controller-manager
+roles/master/files/kube-scheduler
+roles/master/files/kubectl
