@@ -20,7 +20,7 @@
     - master
 
 - name: Install and configure flannel overlay network on all minions
-  hosts: minion
+  hosts: all
 
   roles:
     - flannel
